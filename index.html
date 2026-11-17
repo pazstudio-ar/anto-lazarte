@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Antonella Lazarte · Asesora de obras sociales</title>
+<meta name="description" content="Te ayudo a cambiarte a una mejor obra social usando el aporte de tu recibo de sueldo. Sin cuotas, sin bonos ni copagos. Zona sur, oeste, norte y CABA.">
+<meta name="theme-color" content="#FBF6EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FBF6EE;--sand:#F1E2CC;--sage:#7E9E80;--sage-d:#5E7E61;--terra:#C4662A;--terra-d:#A5521D;--ink:#3A2E26;--soft:#76685C;--line:#E7D9C4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:6px}
+.s{font-family:Bitter,Georgia,serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* nav */
+.top{position:sticky;top:0;z-index:20;background:rgba(251,246,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:64px}
+.top img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.top b{font:700 18px Bitter,serif;line-height:1.1}
+.top small{display:block;font:500 12px Inter;color:var(--soft)}
+.top .cta{margin-left:auto;background:var(--terra);color:#fff;font-weight:700;font-size:14px;padding:10px 14px;border-radius:12px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 60px}
+.blob{position:absolute;z-index:0;border-radius:58% 42% 55% 45%/50% 60% 40% 50%;pointer-events:none}
+.b1{width:420px;height:380px;background:#DCE6D9;right:-160px;top:40px}
+.b2{width:260px;height:240px;background:#F3DCC8;left:-120px;bottom:-60px}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:36px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--sage-d);font-weight:600;font-size:13px;padding:7px 12px;border-radius:99px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--sage)}
+h1{font:700 clamp(40px,9.5vw,68px)/1.04 Bitter,serif;letter-spacing:-.01em;margin-top:16px}
+h1 em{font-style:italic;color:var(--terra)}
+.lead{font-size:18px;color:var(--soft);margin-top:16px;max-width:31em}
+.lead b{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 22px;border-radius:14px;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.97)}
+.btn-t{background:var(--terra);color:#fff}.btn-t:hover{background:var(--terra-d)}
+.btn-l{background:#fff;border:1.5px solid var(--ink)}
+.btn svg{width:20px;height:20px}
+.mini{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--soft)}
+.mini span{display:flex;align-items:center;gap:7px}
+.mini span::before{content:"✓";color:var(--sage-d);font-weight:700}
+
+.pola{position:relative;justify-self:center;width:min(100%,360px);background:#fff;padding:14px 14px 0;box-shadow:0 24px 50px -20px rgba(58,46,38,.35);transform:rotate(2deg)}
+.pola::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-3deg);background:rgba(220,230,217,.9)}
+.pola img{width:100%;aspect-ratio:560/531;object-fit:cover}
+.pola p{font:500 26px Bitter,serif;text-align:center;padding:14px 0 18px}
+.heart{position:absolute;right:-18px;bottom:46px;width:64px;color:var(--terra);transform:rotate(-12deg)}
+
+/* secciones */
+.sec{padding:64px 0}
+.k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.sec h2{font:700 clamp(30px,6vw,44px)/1.1 Bitter,serif;margin-top:10px}
+.sec p.sub{color:var(--soft);margin-top:10px;max-width:36em;font-size:17px}
+
+.how3{background:var(--sage);color:#fff;border-radius:28px;padding:34px 24px;position:relative;overflow:hidden}
+.how3::after{content:"";position:absolute;width:260px;height:240px;right:-90px;bottom:-110px;border-radius:58% 42% 55% 45%/50% 60% 40% 50%;background:rgba(255,255,255,.12)}
+.how3 .k{color:#F7E7D2}
+.how3 h2{color:#fff}
+.how3 .big{font:700 clamp(64px,16vw,110px)/1 Bitter,serif;color:#fff;margin:18px 0 6px}
+.how3 p{font-size:18px;max-width:34em;color:#F2F5EF}
+
+.ben{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.ben div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 16px}
+.ben svg{width:30px;height:30px;color:var(--terra)}
+.ben b{display:block;margin-top:10px;font-size:16px;line-height:1.3}
+
+.steps{display:grid;gap:14px;margin-top:28px;counter-reset:s}
+.steps li{list-style:none;display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:44px;height:44px;border-radius:50%;background:var(--sand);color:var(--terra-d);display:grid;place-items:center;font:700 20px Bitter,serif}
+.steps b{display:block;font:700 19px Bitter,serif}
+.steps span{color:var(--soft);font-size:15px}
+
+/* chequeo */
+.check{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px 20px;margin-top:28px;box-shadow:0 20px 40px -28px rgba(58,46,38,.4)}
+.q{margin-top:18px}
+.q:first-child{margin-top:0}
+.q p{font-weight:700;font-size:16px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opts button{font:600 15px Inter;padding:10px 16px;border-radius:99px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink);cursor:pointer}
+.opts button.on{background:var(--sage-d);border-color:var(--sage-d);color:#fff}
+.res{margin-top:22px;border-radius:18px;padding:18px;display:none}
+.res.ok{display:block;background:#E7EFE5}
+.res.no{display:block;background:#F7E7D9}
+.res b{font:700 20px Bitter,serif;display:block}
+.res p{margin-top:6px;color:var(--soft)}
+.res .btn{margin-top:14px}
+
+/* testimonios */
+.tests{display:grid;gap:16px;margin-top:28px}
+.chat{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}
+.bub{background:#F4F1EA;border-radius:4px 16px 16px 16px;padding:12px 14px;font-size:16px;line-height:1.45;display:inline-block;max-width:100%}
+.bub.me{background:#E3EDE0;border-radius:16px 4px 16px 16px;margin-left:auto;display:block;width:fit-content;margin-top:8px}
+.chat small{display:block;margin-top:12px;color:var(--soft);font-size:13px}
+
+/* sobre mí */
+.about{display:grid;gap:24px;align-items:center}
+.about img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 14px 30px -14px rgba(58,46,38,.4)}
+.about p{font-size:17px;color:var(--soft);margin-top:10px}
+.about p b{color:var(--ink)}
+
+/* faq */
+.faq{margin-top:24px;display:grid;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--terra);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px;color:var(--soft)}
+
+.final{background:var(--terra);color:#fff;border-radius:28px;padding:40px 24px;text-align:center;margin:0 0 70px}
+.final h2{font:700 clamp(30px,6.4vw,46px)/1.1 Bitter,serif}
+.final p{margin:12px auto 0;max-width:30em;color:#FBE9DA}
+.final .btn{background:#fff;color:var(--terra-d);margin-top:22px}
+footer{border-top:1px solid var(--line);padding:22px 0 100px;font-size:13px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:860px){
+  .hero{padding:72px 0 90px}
+  .hero .wrap{grid-template-columns:1.2fr .8fr;align-items:center;gap:56px}
+  .ben{grid-template-columns:repeat(4,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{flex-direction:column}
+  .tests{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:auto 1fr;gap:40px}
+  .how3{padding:52px 56px}
+  .check{padding:36px 40px}
+  .final{padding:60px 40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="anto-mini.jpg" alt="Antonella Lazarte" width="40" height="40">
+    <div><b>Antonella Lazarte</b><small>Asesora de obras sociales</small></div>
+    <a class="cta wa" href="#">Escribime</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <span class="chip"><i></i>Zona sur, oeste, norte y CABA</span>
+        <h1>Elegí tu obra social con información, <em>no con dudas.</em></h1>
+        <p class="lead">Te ayudo a cambiarte a una obra social mejor <b>usando el aporte de tu recibo de sueldo</b>, sin pagar nada extra. Cobertura para vos y tu familia, y te acompaño en cada paso.</p>
+        <div class="ctas">
+          <a class="btn btn-t wa" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>Consultá tu opción</a>
+          <a class="btn btn-l" href="#chequeo">¿Puedo cambiarme?</a>
+        </div>
+        <div class="mini"><span>Sin bonos ni copagos</span><span>Sin cuota mensual</span><span>100% online</span></div>
+      </div>
+      <figure class="pola">
+        <img src="anto.jpg" alt="Antonella Lazarte, asesora de obras sociales" width="560" height="531">
+        <p>Hola, soy Anto</p>
+        <svg class="heart" viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M32 50S6 35 6 18A12 12 0 0 1 32 12a12 12 0 0 1 26 6c0 17-26 32-26 32Z"/><path d="M50 4l3-3M56 10l4-1M44 2l0-2" /></svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec reveal" style="padding-top:20px">
+    <div class="wrap">
+      <div class="how3">
+        <span class="k">¿Cómo es posible?</span>
+        <div class="big">3%</div>
+        <p>Ese aporte que ya te descuentan del sueldo todos los meses te da derecho a elegir dónde querés atenderte. Y la mayoría no lo sabe. El cambio no te cuesta nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal" style="padding-top:10px">
+    <div class="wrap">
+      <span class="k">Lo que ganás</span>
+      <h2>Una cobertura que de verdad usás</h2>
+      <div class="ben">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v6a3 3 0 0 0 6 0V3M12 12v3a5 5 0 0 0 10 0v-2"/><circle cx="22" cy="11" r="0"/></svg><b>Consultas sin bonos ni copagos</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg><b>Farmacia con hasta 100% de descuento</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3c-3 0-4 3-3 7l2 10c.5 2 2 2 2.5 0L10 14h4l1.5 6c.5 2 2 2 2.5 0l2-10c1-4 0-7-3-7-2 0-3 1-5 1S9 3 7 3Z"/></svg><b>Cobertura dental completa</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M8.5 9.5v4M6.5 11.5h4"/></svg><b>Médico a domicilio y ambulancia 24 h</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg><b>Laboratorio y estudios</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 5-7 8-7s7 2 8 7"/></svg><b>Atención en todas las especialidades</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><b>Credencial digital en 72 h</b></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6.5-8 11-8 11Z"/></svg><b>Para vos y tu familia</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal" id="chequeo" style="background:var(--sand)">
+    <div class="wrap">
+      <span class="k">En 10 segundos</span>
+      <h2>¿Podés cambiarte?</h2>
+      <p class="sub">Respondé estas tres preguntas y te digo si podés acceder.</p>
+      <div class="check">
+        <div class="q" data-q="blanco"><p>¿Trabajás en blanco (con recibo de sueldo)?</p><div class="opts"><button type="button" data-v="si">Sí</button><button type="button" data-v="no">No</button></div></div>
+        <div class="q" data-q="edad"><p>¿Tenés entre 18 y 55 años?</p><div class="opts"><button type="button" data-v="si">Sí</button><button type="button" data-v="no">No</button></div></div>
+        <div class="q" data-q="zona"><p>¿Dónde vivís?</p><div class="opts"><button type="button" data-v="Zona sur">Zona sur</button><button type="button" data-v="Zona oeste">Zona oeste</button><button type="button" data-v="Zona norte">Zona norte</button><button type="button" data-v="CABA">CABA</button><button type="button" data-v="otra">Otra zona</button></div></div>
+        <div class="res" id="res" role="status"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal">
+    <div class="wrap">
+      <span class="k">Cómo trabajo</span>
+      <h2>Yo me ocupo del trámite</h2>
+      <ol class="steps">
+        <li><div><b>Me escribís</b><span>Me contás tu situación y resolvemos tus dudas de forma rápida y clara.</span></div></li>
+        <li><div><b>Gestionamos el cambio</b><span>Todo 100% online y con alta inmediata. Sin vueltas ni papeleo eterno.</span></div></li>
+        <li><div><b>Te acompaño después</b><span>Te paso tus credenciales, te ayudo con los primeros turnos y estoy para lo que necesites.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec reveal" style="padding-top:20px">
+    <div class="wrap">
+      <span class="k">Ustedes</span>
+      <h2>Lo que me escriben mis afiliados</h2>
+      <div class="tests">
+        <div class="chat"><span class="bub">Muchas gracias por la bienvenida! Estoy muy feliz de sumarme y seguro de que tomé la mejor decisión. ¡Vamos con todo! 🇦🇷</span><span class="bub me">Para lo que necesites, soy yo la que te va a acompañar.</span><small>David, afiliado</small></div>
+        <div class="chat"><span class="bub">Buen día Anto, cómo estás? Excelente la obra social, hoy por primera vez me fui a atender.</span><span class="bub me">¡Me alegro muchísimo!</span><small>Afiliado, en su primera atención</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap about">
+      <img src="anto-mini.jpg" alt="Antonella" width="150" height="150">
+      <div>
+        <span class="k">Quién soy</span>
+        <h2 style="margin-top:8px">Hola, soy Antonella</h2>
+        <p><b>Asesora de obras sociales, con ganas de ayudarte a cuidarte mejor.</b> También soy mamá de una princesa que es puro movimiento, y creo que la vida está en los detalles. Acá vas a encontrar información útil sobre tu salud y a alguien que te responde de verdad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal">
+    <div class="wrap">
+      <span class="k">Preguntas frecuentes</span>
+      <h2>Tus dudas, resueltas</h2>
+      <div class="faq">
+        <details><summary>¿Tengo que pagar algo?</summary><p>No. No pagás cuota mensual: la cobertura se cubre con el aporte que ya te descuentan del recibo de sueldo. El cambio no te cuesta nada.</p></details>
+        <details><summary>¿Quién puede cambiarse?</summary><p>Personas que trabajan en blanco y tienen entre 18 y 55 años, en zona sur, oeste, norte o CABA. Escribime y vemos tu caso.</p></details>
+        <details><summary>¿Cambiarse es un trámite eterno?</summary><p>Mito. Es 100% online, con alta inmediata, y la credencial digital te llega en 72 h. Yo te guío en cada paso.</p></details>
+        <details><summary>¿Y después del cambio?</summary><p>Sigo con vos: te paso tus credenciales, te ayudo a sacar los primeros turnos y te respondo cuando lo necesites.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="final reveal">
+      <h2>Consultá tu opción, sin compromiso</h2>
+      <p>Escribime y en pocos minutos te digo qué cobertura te conviene a vos y a tu familia.</p>
+      <a class="btn wa" href="#">Escribime por WhatsApp</a>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>Antonella Lazarte · Asesora de obras sociales · @antolazarte.salud</span><span>Diseño web: <a href="https://pazstudio.com.ar" target="_blank" rel="noopener">Paz Studio</a></span></div></footer>
+
+<a class="wa-float wa" href="#" aria-label="Escribime por WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+
+<script>
+(function(){
+  var WA="https://wa.link/21t4am"; // link de su bio (se cambia por wa.me con mensaje cuando tengamos su número)
+  document.querySelectorAll(".wa").forEach(function(a){a.href=WA;a.target="_blank";a.rel="noopener";});
+  var ans={};
+  document.querySelectorAll(".q").forEach(function(q){
+    q.querySelectorAll("button").forEach(function(b){
+      b.onclick=function(){ q.querySelectorAll("button").forEach(function(x){x.classList.remove("on")}); b.classList.add("on"); ans[q.dataset.q]=b.dataset.v; show(); };
+    });
+  });
+  function show(){
+    var r=document.getElementById("res");
+    if(!ans.blanco||!ans.edad||!ans.zona){r.className="res";return;}
+    if(ans.blanco==="si"&&ans.edad==="si"&&ans.zona!=="otra"){
+      r.className="res ok";
+      r.innerHTML='<b>¡Sí, podés cambiarte!</b><p>Trabajás en blanco y estás en '+ans.zona+'. Escribime y te cuento qué cobertura te conviene.</p><a class="btn btn-t" target="_blank" rel="noopener" href="'+WA+'">Quiero cambiarme</a>';
+    } else {
+      r.className="res no";
+      r.innerHTML='<b>Escribime y vemos tu caso</b><p>Puede que haya otra opción para vos. Contame tu situación y te asesoro.</p><a class="btn btn-t" target="_blank" rel="noopener" href="'+WA+'">Consultar</a>';
+    }
+  }
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:.12});
+    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  } else document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in")});
+})();
+</script>
+</body>
+</html>
